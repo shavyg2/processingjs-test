@@ -91,8 +91,9 @@ p= new Processing canvas
 particles=[]
 
 p.draw=->
-  p.fill(255,255,255,60)
+  p.fill(255,255,255,255)
   p.rect(0,0,p.width,p.height)
+  p.fill(255,255,255,0)
 
   if p.__mousePressed
     for i in [0...10]
@@ -119,8 +120,8 @@ image=p.requestImage("http://www.sierraclub.bc.ca/images/design-assets/twitter-i
 image.resize(50,50)
 p.size(document.body.clientWidth,document.body.clientHeight*0.9)
 p.frameRate(30)
-p.fill(255,255,255)
-p.rect(0,0,p.width,p.height)
+#p.fill(255,255,255)
+#p.rect(0,0,p.width,p.height)
 p.loop()
 
 ###

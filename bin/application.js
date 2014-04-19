@@ -101,8 +101,9 @@ particles = [];
 
 p.draw = function() {
   var i, newp, particle, _i, _j, _k, _len, _len1;
-  p.fill(255, 255, 255, 60);
+  p.fill(255, 255, 255, 255);
   p.rect(0, 0, p.width, p.height);
+  p.fill(255, 255, 255, 0);
   if (p.__mousePressed) {
     for (i = _i = 0; _i < 10; i = ++_i) {
       particles.push(new Particle(p.mouseX, p.mouseY));
@@ -134,10 +135,6 @@ image.resize(50, 50);
 p.size(document.body.clientWidth, document.body.clientHeight * 0.9);
 
 p.frameRate(30);
-
-p.fill(255, 255, 255);
-
-p.rect(0, 0, p.width, p.height);
 
 p.loop();
 
